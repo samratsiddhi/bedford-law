@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      *{
+          margin:0;
+          padding:0;
+          box-sizing: border-box;
+          font-family: 'Poppin',sans-serif ;
+        }
+        
+        body{
+          display: flex;
+          height: 100vh;
+          justify-content: center;
+          align-items: center;
+          background : linear-gradient(135deg,#71b7e6,#9b59b6) ;
+        }
+        
+        .container{
+          max-width: 700px;
+          width: 100%;
+          background: #fff;
+          padding: 25px 30px;
+          border-radius: 5px;
+        }
+           
+        .container .title{
+         font-size: 25px;
+         font-weight: 500;
+         position: relative;
+       }
+       
+       .container .title::before{
+         content:' ';
+         position: absolute;
+         left: 0px;
+         bottom: 0px;
+         height: 3px;
+         width: 60px;
+         background: linear-gradient(135deg,#71b7e6,#9b59b6);
+       }
+        .button{
+          height: 45px;
+         }
+        
+        .button input{
+          height: 100%;
+          width: 100%;
+          outline: none;
+          color: #fff;
+          border: none;
+          font-size: 18px;
+          font-weight: 500;
+          border-radius: 5px;
+          letter-spacing: 1px;
+          background: linear-gradient(135deg,#71b7e6,#9b59b6);
+        }
+  </style>
+</head>
+<body>
+   <div class="container">
+      <div class = "title">{{message}} </div>
+          <a href="/">
+            <div class="button">
+               <input type="submit" name="Try Again" value="Try Again" id="">
+           </div>
+         </a>
+   </div>
+</body>
+</html>

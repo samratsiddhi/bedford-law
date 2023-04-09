@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static_assets/app.css">
+    <title>Bedfords law</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'Poppin',sans-serif ;
+          }
+          
+          body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background : linear-gradient(135deg,#71b7e6,#9b59b6) ;
+          }
+          
+          .container{
+            max-width: 700px;
+            width: 100%;
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 5px;
+          }
+          
+          .container .title{
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+          }
+          
+          .container .title::before{
+            content:' ';
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            height: 3px;
+            width: 60px;
+            background: linear-gradient(135deg,#71b7e6,#9b59b6);
+          }
+          
+          .container form .csv-detail{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
+          
+          form .csv-detail .input-box{
+            margin-top: 15px;
+            width: 100%;
+          } 
+          
+          form .csv-detail .input-box input{
+            height: 45px;
+            width: 100%;
+            margin-bottom: 15px;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-left: 15px;
+            font-size: 16px;
+            border-bottom-width:2px;
+            transition:  all 0.3s ease;
+          }
+          
+          form .csv-detail .input-box .details{
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+          } 
+          
+          .csv-detail .input-box input:focus,
+          .csv-detail .input-box input:valid{
+            border-color: #9b59b6;
+          }
+          
+          form .button{
+            height: 45px;
+           }
+          
+          form .button input{
+            height: 100%;
+            width: 100%;
+            outline: none;
+            color: #fff;
+            border: none;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg,#71b7e6,#9b59b6);
+          }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class = "title">Select CSV </div>
+        <form action="/verify" enctype="multipart/form-data">
+            <div class="csv-detail">
+                <div class="input-box">
+                    <span class="details">Enter absolute path to the csv file</span>
+                    <input type="text" name="location" placeholder="eg c:/user/app/data.csv" id="" required>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" name="submit" id="">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
